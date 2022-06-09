@@ -1,0 +1,22 @@
+{
+  "build": {
+    "release": {
+      "ios": {
+        "image": "latest"
+      }
+    },
+    "production": {
+      "ios": {
+        "image": "latest"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    }
+  },
+  "cli": {
+    "version": ">= 0.48.1",
+    "requireCommit": true
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "expo": {
+    "name": "Urban Belonging",
+    "slug": "UrbanBelonging",
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "urbanbelonging",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#132a1e"
+    },
+    "extra": {
+      "displayVersion": "v0.1.51"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.urbanbelonging.app",
+      "buildNumber": "1.0.31",
+      "infoPlist": {
+        "UIBackgroundModes": ["location"],
+        "NSCameraUsageDescription": "This app uses the camera to capture pictures along an Urban Belonging walk.",
+        "NSLocationAlwaysUsageDescription": "This app uses the GPS on your device to track your Urban Belonging walk.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app uses the GPS on your device to track your Urban Belonging walk.",
+        "NSLocationWhenInUseUsageDescription": "This app uses the GPS on your device to track your Urban Belonging walk.",
+        "NSPhotoLibraryAddUsageDescription": "This app uses your photo library to store pictures you have taken."
+      },
+      "config": {
+        "googleMapsApiKey": "GOOGLE_MAPS_ANDROID_API_KEY"
+      },
+      "icon": "./assets/images/icon.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundImage": "./assets/images/adaptive-icon-bg.png",
+        "backgroundColor": "#132a1e"
+      },
+      "googleServicesFile": "./google-services.json",
+      "package": "com.urbanbelonging.app",
+      "versionCode": 33,
+      "permissions": [
+        "LOCATION",
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "MEDIA_LIBRARY"
+      ],
+      "softwareKeyboardLayoutMode": "pan",
+      "config": {
+        "googleMaps": {
+          "apiKey": "GOOGLE_MAPS_IOS_API_KEY"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "UB",
+            "project": "urban-belonging",
+            "authToken": "SENTRY_AUTH_TOKEN"
+          }
+        }
+      ]
+    }
+  }
+}
